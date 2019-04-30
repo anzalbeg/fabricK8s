@@ -55,11 +55,11 @@ spec:
         - name: ORDERER_GENERAL_GENESISMETHOD
           value: file
         - name: ORDERER_GENERAL_GENESISFILE
-          value:  /etc/crypto-config/k8sTest/HLF/channel-artifacts/orderer-genesis.block
+          value:  /etc/crypto-config/fabricTest/HLF/channel-artifacts/orderer-genesis.block
         - name: ORDERER_GENERAL_LOCALMSPID
           value: {{ .Values.fabricOrderer.msp }}
         - name: ORDERER_GENERAL_LOCALMSPDIR
-          value: /etc/crypto-config/k8sTest/HLF/crypto-config/ordererOrganizations/{{ .Values.fabricOrderer.orgDomain }}/orderers/orderer.{{ .Values.fabricOrderer.orgDomain }}/msp
+          value: /etc/crypto-config/fabricTest/HLF/crypto-config/ordererOrganizations/{{ .Values.fabricOrderer.orgDomain }}/orderers/orderer.{{ .Values.fabricOrderer.orgDomain }}/msp
         {{  if eq .Values.fabricOrderer.consensusType "kafka" }}
         - name: ORDERER_KAFKA_VERBOSE
           value: "true"

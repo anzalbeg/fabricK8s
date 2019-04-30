@@ -2,5 +2,5 @@
 #note: modify repository and revison accordingly.
 cryptoConfigMount:
   gitRepo:
-    repository: "https://github.com/anzalbeg/k8sTest.git"
+    repository: "https://github.com/anzalbeg/fabricTest.git"
     revision: "master"
