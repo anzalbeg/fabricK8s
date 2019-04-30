@@ -47,9 +47,9 @@ spec:
         - fabric-ca-server
         - start
         - --ca.certfile
-        - /etc/crypto-config/fabricTest/HLF/crypto-config/peerOrganizations/{{ .Values.fabricOrg2.domain }}/ca/ca.{{ .Values.fabricOrg2.domain }}-cert.pem
+        - /etc/crypto-config/fabricK8s/HLF/crypto-config/peerOrganizations/{{ .Values.fabricOrg2.domain }}/ca/ca.{{ .Values.fabricOrg2.domain }}-cert.pem
         - --ca.keyfile
-        - /etc/crypto-config/fabricTest/HLF/crypto-config/peerOrganizations/{{ .Values.fabricOrg2.domain }}/ca/{{ .Values.fabricCa2.keyStoreHash }}_sk
+        - /etc/crypto-config/fabricK8s/HLF/crypto-config/peerOrganizations/{{ .Values.fabricOrg2.domain }}/ca/{{ .Values.fabricCa2.keyStoreHash }}_sk
         - -b
         - admin:adminpw
         - -d
