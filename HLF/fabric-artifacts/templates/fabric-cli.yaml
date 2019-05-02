@@ -35,8 +35,8 @@ spec:
           value: 0.0.0.0:7051
         - name: CORE_PEER_ID
           value: cli
-        # - name: CORE_PEER_CHAINCODELISTENADDRESS 
-        #   value: {{ .Values.ingress.addr }}:7051
+        - name: CORE_PEER_CHAINCODELISTENADDRESS 
+          value: 0.0.0.0:7051
         - name: CORE_PEER_MSPCONFIGPATH
           value: /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/crypto-config/fabricK8s/HLF/crypto-config/peerOrganizations/{{ .Values.fabricOrg1.domain }}/users/Admin@{{ .Values.fabricOrg1.domain }}/msp
         - name: CORE_PEER_LOCALMSPID

@@ -15,4 +15,4 @@ export CORE_PEER_ADDRESS="dev-peer0-xyz:7051"
 export CHANNEL_NAME="mychannel"
 #instantiating  chain code
 
-kubectl exec $CLI_POD_ID -it -- bash -c "CORE_PEER_LOCALMSPID=$CORE_PEER_LOCALMSPID && CORE_PEER_MSPCONFIGPATH=$CORE_PEER_MSPCONFIGPATH && CORE_PEER_ADDRESS=$CORE_PEER_ADDRESS && peer chaincode upgrade -o $ORDERER_ADDR -C $CHANNEL_NAME -n supplychain -v 2.0 -c '{\"Args\":[\"init\",\" \"]}' -P \"OR ('Org1MSP.peer','Org2MSP.peer')\""
+kubectl exec $CLI_POD_ID -it -- bash -c "CORE_PEER_LOCALMSPID=$CORE_PEER_LOCALMSPID && CORE_PEER_MSPCONFIGPATH=$CORE_PEER_MSPCONFIGPATH && CORE_PEER_ADDRESS=$CORE_PEER_ADDRESS && peer chaincode upgrade -o $ORDERER_ADDR -C $CHANNEL_NAME -n chaincode_example02 -v 3.0 -c '{\"Args\":[\"init\",\"A\",\"100\",\"B\",\"200\"]}' -P \"OR ('Org1MSP.peer','Org2MSP.peer')\""

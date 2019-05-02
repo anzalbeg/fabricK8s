@@ -16,7 +16,7 @@ export CHANNEL_NAME="mychannel"
 # invoke 
 
 set +x
-kubectl exec $CLI_POD_ID -it -- bash -c "CORE_PEER_LOCALMSPID=$CORE_PEER_LOCALMSPID && CORE_PEER_MSPCONFIGPATH=$CORE_PEER_MSPCONFIGPATH && CORE_PEER_ADDRESS=$CORE_PEER_ADDRESS && peer chaincode query -C $CHANNEL_NAME -n supplychain -c '{\"Args\":[\"readShipmentData\",\"shipment01\"]}'"
+kubectl exec $CLI_POD_ID -it -- bash -c "CORE_PEER_LOCALMSPID=$CORE_PEER_LOCALMSPID && CORE_PEER_MSPCONFIGPATH=$CORE_PEER_MSPCONFIGPATH && CORE_PEER_ADDRESS=$CORE_PEER_ADDRESS && peer chaincode query -C $CHANNEL_NAME -n chaincode_example02 -c '{\"Args\":[\"readShipmentData\",\"shipment01\"]}'"
 set -x
 
 #peer0org2
@@ -31,5 +31,5 @@ export CORE_PEER_ADDRESS="dev-peer0-abc:7051"
 export CHANNEL_NAME="mychannel"
 
 set +x
-kubectl exec $CLI_POD_ID -it -- bash -c "CORE_PEER_LOCALMSPID=$CORE_PEER_LOCALMSPID && CORE_PEER_MSPCONFIGPATH=$CORE_PEER_MSPCONFIGPATH && CORE_PEER_ADDRESS=$CORE_PEER_ADDRESS && peer chaincode query -C $CHANNEL_NAME -n supplychain -c '{\"Args\":[\"readShipmentData\",\"shipment01\"]}'"
+kubectl exec $CLI_POD_ID -it -- bash -c "CORE_PEER_LOCALMSPID=$CORE_PEER_LOCALMSPID && CORE_PEER_MSPCONFIGPATH=$CORE_PEER_MSPCONFIGPATH && CORE_PEER_ADDRESS=$CORE_PEER_ADDRESS && peer chaincode query -C $CHANNEL_NAME -n chaincode_example02 -c '{\"Args\":[\"readShipmentData\",\"shipment01\"]}'"
 set -x
