@@ -20,5 +20,5 @@ export CHANNEL_NAME="mychannel"
 # invoke 
 
 set -x
-kubectl exec $CLI_POD_ID -it -- bash -c "CORE_PEER_LOCALMSPID=$CORE_PEER_LOCALMSPID && CORE_PEER_ADDRESS=$CORE_PEER_ADDRESS && peer chaincode invoke -o $ORDERER_ADDR -C $CHANNEL_NAME -n chaincode_example02 -v 1.0 -c '{\"Args\":[\"invoke\",\"a\",\"b\",\"10\"]}' >&log.txt'"
+kubectl exec $CLI_POD_ID -it -- bash -c "CORE_PEER_LOCALMSPID=$CORE_PEER_LOCALMSPID && CORE_PEER_ADDRESS=$CORE_PEER_ADDRESS && peer chaincode invoke -o $ORDERER_ADDR -C $CHANNEL_NAME -n chaincode_example02 -v 1.0 -c '{\"Args\":[\"invoke\",\"a\",\"b\",\"10\"]}'"  >&log.txt
 set +x
